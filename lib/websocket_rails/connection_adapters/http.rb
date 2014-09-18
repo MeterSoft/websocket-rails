@@ -26,6 +26,9 @@ module WebsocketRails
         p " -------------------#{WebsocketRails.config.allowed_origins}-------------------------"
         p " -------------------#{origin}-------------------------"
         p " -------------------#{WebsocketRails.config.allowed_origins.include?(origin)}-------------------------"
+        Rails.loger.info " -------------------#{WebsocketRails.config.allowed_origins}-------------------------"
+        Rails.loger.info " -------------------#{origin}-------------------------"
+        Rails.loger.info " -------------------#{WebsocketRails.config.allowed_origins.include?(origin)}-------------------------"
         # IE < 10.0 hack
         # XDomainRequest will not bubble up notifications of download progress in the first 2kb of the response
         # http://blogs.msdn.com/b/ieinternals/archive/2010/04/06/comet-streaming-in-internet-explorer-with-xmlhttprequest-and-xdomainrequest.aspx

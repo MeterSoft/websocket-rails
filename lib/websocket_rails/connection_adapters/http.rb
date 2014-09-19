@@ -22,7 +22,7 @@ module WebsocketRails
         define_deferrable_callbacks
 
         origin = "#{request.protocol}#{request.raw_host_with_port}"
-        @headers.merge!({'Access-Control-Allow-Origin' => origin}) if WebsocketRails.config.allowed_origins.include?(origin)
+        @headers.merge!({'Access-Control-Allow-Origin' => origin}) #if WebsocketRails.config.allowed_origins.include?(origin)
         p " -------------------#{WebsocketRails.config.allowed_origins}-------------------------"
         p " -------------------#{origin}-------------------------"
         p " -------------------#{WebsocketRails.config.allowed_origins.include?(origin)}-------------------------"
